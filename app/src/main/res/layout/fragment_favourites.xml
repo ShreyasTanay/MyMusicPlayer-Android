@@ -1,0 +1,96 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="#aaaaaa"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/favouriteRecycler"></android.support.v7.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/hiddenBarFavScreen"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_bottombar">
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/playPauseButtonFav"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="31dp"
+            android:background="@drawable/ic_pause_green"/>
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/SongIcon"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:src="@drawable/ic_song"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView
+            android:id="@+id/textNowPlaying"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@id/SongIcon"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Now Playing"
+            android:textColor="@color/first"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songTitleNowPlayingFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textNowPlaying"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/SongIcon"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/open_sans_light"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:text="..."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/songArtistNowPlayingFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/songTitleNowPlayingFav"
+            android:layout_marginLeft="32dp"
+            android:layout_toRightOf="@id/SongIcon"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/open_sans_light"
+            android:maxWidth="150dp"
+            android:singleLine="true"
+            android:text="..."
+            android:textColor="#BBBBBB"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have NO Favourite Songs yet!"
+        android:id="@+id/noFavourites"
+        android:layout_centerInParent="true"
+        android:textColor="#D3D3D3"
+        android:visibility="invisible"/>
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="345dp"
+                android:background="@drawable/bg_gradient"
+                android:id="@+id/RelNavBar">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="music is life!"
+                    android:fontFamily="@font/oswald_light"
+                    android:textStyle="bold"
+                    android:textSize="55sp"
+                    android:textColor="#84bd00"
+                    android:layout_marginBottom="40dp"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/NavMenu"
+                android:layout_below="@id/RelNavBar">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/all_songs"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/icon_allsongs"
+                        android:text="all songs"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                    <ImageView
+                        android:id="@+id/icon_allsongs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/navigation_allsongs"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/favourites"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/icon_favourites"
+                        android:text="favourites"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                    <ImageView
+                        android:id="@+id/icon_favourites"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/navigation_favorites"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/settings"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/icon_settings"
+                        android:text="settings"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                    <ImageView
+                        android:id="@+id/icon_settings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/navigation_settings"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:id="@+id/about_me"
+                    android:clickable="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/icon_aboutme"
+                        android:text="about me"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="serif"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+                    <ImageView
+                        android:id="@+id/icon_aboutme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="12dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_about_me"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
